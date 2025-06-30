@@ -15,8 +15,8 @@ class Order(models.Model):
     order_status = models.CharField(max_length=50)
 
 class Prescription(models.Model):
-    prescription_form_file = models.FileField(upload_to='./uploads/prescriptions')
-    prescription_text = models.TextField()
+    prescription_form_file = models.FileField(upload_to='./uploads/prescriptions', null=True)
+    prescription_text = models.TextField(null=True)
     customer = models.ForeignKey(Customer)
     staffId = models.ForeignKey(Staff)
 
