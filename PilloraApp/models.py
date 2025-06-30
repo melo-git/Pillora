@@ -1,4 +1,5 @@
 from django.db import models
+from Mediventory.models import Staff
 
 # Create your models here.
 class Customer(models.Model):
@@ -7,8 +8,3 @@ class Customer(models.Model):
     contact_number = models.CharField(max_length = 20) # could use PhoneNumberField from the django-phonenumber-filed package
     email = models.EmailField()
     address = models.TextField()
-
-
-class ShippingContactAddress(models.Model):
-    shipping_address = models.TextField()
-    shipping_contact_number =models.CharField(max_length = 20)
